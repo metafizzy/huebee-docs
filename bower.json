@@ -1,0 +1,21 @@
+{
+  "name": "huebee-docs",
+  "authors": [
+    "David DeSandro <desandrocodes@gmail.com>"
+  ],
+  "description": "Homepage and documentation for Huebee",
+  "main": "",
+  "license": "BY-CC",
+  "homepage": "http://huebee.metafizzy.co",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "^5.0.0"
+  }
+}

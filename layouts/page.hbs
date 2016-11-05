@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Huebee</title>
+
+    {{#each cssPaths}}
+      <link rel="stylesheet" href="../{{this}}" />
+    {{/each}}
+  
+</head>
+<body>
+
+  {{> hero }}
+
+
+{{#each jsPaths}}
+  <script src="../{{this}}"></script>
+{{/each}}
+
+</body>
+</html>

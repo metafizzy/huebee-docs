@@ -1,0 +1,18 @@
+{
+  "name": "huebee-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfiles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "BY-CC",
+  "dependencies": {
+    "glob": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-hb": "^5.1.4",
+    "gulp-rename": "^1.2.2"
+  }
+}
