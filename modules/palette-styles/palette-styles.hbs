@@ -1,4 +1,6 @@
 <style id="palette-styles">
+  a { color: {{paletteColors.[1]}}; }
+  a:hover { color: {{paletteColors.[3]}}; }
   {{#each paletteColors}}
     .color{{@index}}-text,
     .color{{@index}}-text-hover:hover { color: {{this}}; }

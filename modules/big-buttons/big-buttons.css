@@ -17,6 +17,8 @@
   line-height: 1.0;
 }
 
+.big-button:hover { text-decoration: none; }
+
 .big-button--fill {
   background-image: linear-gradient( hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.15) );
 }

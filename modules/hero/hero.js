@@ -71,6 +71,9 @@ HD.hero = function( elem ) {
       text += selector + '-border, ' + selector + '-border-hover:hover ' +
         '{ border-color: ' + color + '; } \n';
     });
+    // link color
+    text += 'a { color: ' + palette[1] + '; }';
+    text += 'a:hover { color: ' + palette[3] + '; }';
 
     styleElem.textContent = text;
   }

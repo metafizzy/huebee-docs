@@ -1,4 +1,182 @@
-
 {{> hero}}
 
+
+
+<div class="container">
+
 {{> big-buttons}}
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Install</h2>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Download</h3>
+
+<ul>
+  <li>
+    CSS:
+    <ul>
+      <li><a href="https://unpkg.com/huebee@1/dist/huebee.min.css">huebee.min.css</a> minified, or</li>
+      <li><a href="https://unpkg.com/huebee@1/dist/huebee.css">huebee.css</a> un-minified</li>
+    </ul>
+  </li>
+  <li>
+    JavaScript:
+    <ul>
+      <li><a href="https://unpkg.com/huebee@1/dist/huebee.pkgd.min.js">huebee.pkgd.min.js</a> minified, or</li>
+      <li><a href="https://unpkg.com/huebee@1/dist/huebee.pkgd.js">huebee.pkgd.js</a> un-minified</li>
+    </ul>
+  </li>
+</ul>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>CDN</h3>
+
+<p>Link directly to Huebee files on <a href="https://unpkg.com/">unpkg</a>.</p>
+
+``` html
+<link rel="stylesheet" href="https://unpkg.com/huebee@1/dist/huebee.min.css">
+<!-- or -->
+<link rel="stylesheet" href="https://unpkg.com/huebee@1/dist/huebee.css">
+```
+
+``` html
+<script src="https://unpkg.com/huebee@1/dist/huebee.pkgd.min.js"></script>
+<!-- or -->
+<script src="https://unpkg.com/huebee@1/dist/huebee.pkgd.js"></script>
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Package managers</h3>
+
+<p>Install with npm: <code>npm install huebee</code></p>
+
+<p>Install with Bower: <code>bower install huebee --save</code></p>
+
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>License</h2>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Commercial license</h3>
+
+<p>If you want to use Huebee to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. <a href="license.html">Read more about Huebee commercial licensing</a>.</p>
+
+<p>Once purchased, you&rsquo;ll receive a commercial license PDF and be all set to use Huebee in your commercial applications.</p>
+
+<div class="buy-button-trio">
+  {{#license_options.developer}}
+    {{> buy-button}}
+  {{/license_options.developer}}
+
+  {{#license_options.team}}
+    {{> buy-button}}
+  {{/license_options.team}}
+
+  {{#license_options.organization}}
+    {{> buy-button}}
+  {{/license_options.organization}}
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Open source license</h3>
+
+<p>If you are creating an open source application under a license compatible with the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL license v3</a>, you may use Huebee under the terms of the GPLv3. <a href="license.html">Read more about Huebee open source licensing</a>.</p>
+
+<h2>Getting started</h2>
+
+<p>Include the Huebee <code>.css</code> and <code>.js</code> files in your site.</p>
+
+``` html
+<link rel="stylesheet" href="/path/to/huebee.css" media="screen">
+```
+
+``` html
+<script src="/path/to/huebee.pkgd.min.js"></script>
+```
+
+<p>Huebee works on a container carousel element with a group of cell elements.</p>
+
+``` html
+<div class="color-input">
+  <div class="carousel-cell">...</div>
+  <div class="carousel-cell">...</div>
+  <div class="carousel-cell">...</div>
+  ...
+</div>
+```
+
+<p>There are several ways to initialize Huebee.</p>
+
+
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Initialize with vanilla JavaScript</h3>
+
+<p>You can use Huebee with vanilla JS: <code><span class="keyword">new</span> Huebee( elem )</code>. The <code>Huebee()</code> constructor accepts two arguments: the anchor element and an options object.</p>
+
+``` js
+// initialize on single element with selector string
+var hueb = new Huebee( '.color-input', {
+  // options
+  setBGColor: true,
+  saturations: 2,
+});
+```
+
+``` js
+// initialize on single element with element
+var elem = document.querySelector('.color-input');
+var hueb = new Huebee( elem, {
+  // options
+});
+```
+
+``` js
+// initials on multiple elements with loop
+var elems = document.querySelectorAll('.color-input');
+for ( var i=0; i < elems.length; i++ ) {
+  var elem = elems[i];
+  new Huebee( elem, {
+    // options
+  });
+}
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Initialize with jQuery</h3>
+
+<p>You can use Huebee as a jQuery plugin: <code>$(<span class="string">'selector'</span>).huebee()</code>.</p>
+
+``` js
+$('.color-input').each( function( i, input ) {
+  var hueb = new Huebee( input, {
+    // options
+  })
+});
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Initialize with HTML</h3>
+
+<p>You can initialize Huebee in HTML, without writing any JavaScript. Add <code>data-huebee</code> attribute to the carousel element. <a href="options.html">Options</a> can be set in its value.</p>
+
+
+``` html
+<input class="color-input" data-huebee='{ "setBGColor": true, "saturations": 2 }' />
+```
+
+<p>Options set in HTML must be valid JSON. Keys need to be quoted, for example <code>"setBGColor":</code>. The <code>data-huebee</code> attribute value is set with single quotes <code>'{...}'</code>, but JSON entities use double-quotes <code>"string"</code>.</p>
+
+
+</div>

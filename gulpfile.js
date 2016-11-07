@@ -63,6 +63,7 @@ data.jsPaths = getGlobPaths( jsSrc );
 // -------------------------- content -------------------------- //
 
 var hbLayouts = require('handlebars-layouts');
+var highlight = require('./tasks/utils/highlight.js');
 
 gulp.task( 'content', function() {
   gulp.src('content/*.hbs')
@@ -77,6 +78,7 @@ gulp.task( 'content', function() {
       } )
       .helpers( hbLayouts )
     )
+    .pipe( highlight() )
     .pipe( rename({ extname: '.html' }))
     .pipe( gulp.dest('build') );
 });
