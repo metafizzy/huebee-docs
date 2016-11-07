@@ -6,15 +6,16 @@
 
   <title>Huebee</title>
 
-    {{#each cssPaths}}
-      <link rel="stylesheet" href="../{{this}}" />
-    {{/each}}
-  
+  {{#each cssPaths}}
+    <link rel="stylesheet" href="../{{this}}" />
+  {{/each}}
+
+  {{> palette-styles}}
+
 </head>
-<body>
+<body class="color4-text color5-bg">
 
-  {{> hero }}
-
+{{#block "main"}}{{/block}}
 
 {{#each jsPaths}}
   <script src="../{{this}}"></script>

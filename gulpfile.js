@@ -23,7 +23,16 @@ function getGlobPaths( src ) {
   return paths;
 }
 
-var data = {};
+var data = {
+  paletteColors: [
+    '#C25',
+    '#E62',
+    '#EA0',
+    '#19F',
+    '#333',
+    '#FFF',
+  ]
+};
 
 // -------------------------- css -------------------------- //
 
@@ -53,20 +62,42 @@ data.jsPaths = getGlobPaths( jsSrc );
 
 // -------------------------- content -------------------------- //
 
+var hbLayouts = require('handlebars-layouts');
+
 gulp.task( 'content', function() {
-  gulp.src('layouts/page.hbs')
+  gulp.src('content/*.hbs')
+    .pipe( extendPageLayout() )
     .pipe( handlebars()
       .data( data )
+      .partials( 'layouts/*.hbs')
       .partials( 'modules/**/*/*.hbs', {
         parsePartialName: function( options, file ) {
           return path.basename( file.path, '.hbs' );
         }
       } )
+      .helpers( hbLayouts )
     )
     .pipe( rename({ extname: '.html' }))
     .pipe( gulp.dest('build') );
 });
 
+var transfob = require('transfob');
+
+// add handlebars layouts syntax to use page layout template
+function extendPageLayout() {
+  return transfob( function( file, enc, next ) {
+    var contents = file.contents.toString();
+    contents = '{{#extend "page"}}{{#content "main"}}' + contents +
+      '{{/content}}{{/extend}}';
+    file.contents = new Buffer( contents );
+    next( null, file );
+  });
+}
+
+// --------------------------  -------------------------- //
+
 gulp.task( 'default', [
   'content',
 ]);
+
+

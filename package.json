@@ -13,6 +13,8 @@
     "glob": "^7.1.1",
     "gulp": "^3.9.1",
     "gulp-hb": "^5.1.4",
-    "gulp-rename": "^1.2.2"
+    "gulp-rename": "^1.2.2",
+    "handlebars-layouts": "^3.1.4",
+    "transfob": "^1.0.0"
   }
 }
