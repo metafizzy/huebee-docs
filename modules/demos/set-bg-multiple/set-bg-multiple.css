@@ -1,0 +1,8 @@
+.set-bg-swatch {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-radius: 3px;
+  margin-bottom: 10px;
+}

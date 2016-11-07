@@ -1,0 +1,9 @@
+.set-text-swatch {
+  display: inline-block;
+  line-height: 40px;
+  width: 60px;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-radius: 3px;
+  margin-bottom: 10px;
+  text-align: center;
+}

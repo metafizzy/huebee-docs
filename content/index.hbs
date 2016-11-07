@@ -161,7 +161,7 @@ for ( var i=0; i < elems.length; i++ ) {
 $('.color-input').each( function( i, input ) {
   var hueb = new Huebee( input, {
     // options
-  })
+  });
 });
 ```
 
@@ -169,14 +169,377 @@ $('.color-input').each( function( i, input ) {
 
 <h3>Initialize with HTML</h3>
 
-<p>You can initialize Huebee in HTML, without writing any JavaScript. Add <code>data-huebee</code> attribute to the carousel element. <a href="options.html">Options</a> can be set in its value.</p>
+<p>You can initialize Huebee in HTML, without writing any JavaScript. Add <code>data-huebee</code> attribute to an element.</p>
 
+``` html
+<input class="color-input" data-huebee />
+```
+
+<p>Options can be set in value of <code>data-huebee</code>. Options set in HTML must be valid JSON. Keys need to be quoted, for example <code>"setBGColor"</code>:. The <code>data-huebee</code> attribute value is set with single quotes <code>'{...}'</code>, but JSON entities use double-quotes <code>"string"</code>.</p>
 
 ``` html
 <input class="color-input" data-huebee='{ "setBGColor": true, "saturations": 2 }' />
 ```
 
-<p>Options set in HTML must be valid JSON. Keys need to be quoted, for example <code>"setBGColor":</code>. The <code>data-huebee</code> attribute value is set with single quotes <code>'{...}'</code>, but JSON entities use double-quotes <code>"string"</code>.</p>
+{{! ----------------------------------------------------------------- }}
 
+<h2>Options</h2>
+
+<p>The demos below are opened by default with <code>staticOpen: true</code> to be easily viewable.</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>setText</h3>
+
+<p>Sets elements&rsquo; text to color.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    // default
+    // setText: true
+    // set text of anchor element
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" value="#F00" data-huebee='{ "staticOpen": true }' />
+  </div>
+</div>
+
+<p>Set <code>setText</code> to a selector string to set the text of multiple elements.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    setText: '.set-text-elem'
+    // set text of .set-text-elem elements
+    ```
+    ``` html
+    <div>
+      <span class="swatch set-text-elem"></span>
+      <span class="swatch set-text-elem"></span>
+      <span class="swatch set-text-elem"></span>
+    </div>
+    <!-- add class to anchor to set text of anchor as well -->
+    <input class="set-text-elem" />
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    {{> set-text-multiple}}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>setBGColor</h3>
+
+<p>Sets elements&rsquo; background color to color. Also sets text color so text is visible with light and  dark colors. Default disabled <code>setBGColor: false</code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    setBGColor: true
+    // set background-color of anchor element
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" value="#F00" data-huebee='{ "setBGColor": true, "staticOpen": true }' />
+  </div>
+</div>
+
+<p>Set <code>setBGColor</code> to a selector string to set the background color of multiple elements.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    setBGColor: '.set-bg-elem'
+    // set text of .set-bg-elem elements
+    ```
+    ``` html
+    <div>
+      <span class="swatch set-bg-elem"></span>
+      <span class="swatch set-bg-elem"></span>
+      <span class="swatch set-bg-elem"></span>
+    </div>
+    <!-- add class to anchor to set background-color of anchor as well -->
+    <input class="set-bg-elem" />
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    {{> set-bg-multiple}}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>hues</h3>
+
+<p>Number of hues of the color grid. Hues are slices of the color wheel — red, yellow, green, cyan, blue, magenta. Default <code>hues: 12</code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    hues: 6
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" data-huebee='{ "hues": 6, "staticOpen": true }' />
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>hue0</h3>
+
+<p>The first hue of the color grid. Default <code>hue0: 0</code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    // start color grid at cool blue
+    hue0: 210
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" data-huebee='{ "hue0": 210, "staticOpen": true }' />
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>shades</h3>
+
+<p>Number of shades of colors and shades of gray between white and black. Default <code>shades: 5</code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    shades: 7
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" data-huebee='{ "shades": 7, "staticOpen": true }' />
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>saturations</h3>
+
+<p>Number of sets of saturation of the color grid. <code>saturations: 3</code> will display saturations of 100%, 66%, and 33%. Default <code>saturations: 3</code></p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    saturations: 2
+    // 100% saturation & 50% saturation
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" data-huebee='{ "saturations": 2, "staticOpen": true }' />
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>customColors</h3>
+
+<p>Custom colors added to the top of the grid. Values may be any valid color value: <code>'#19F', '#E5A628', 'darkgray', 'hsl(210, 90%, 55%)'</code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    customColors: [ '#C25', '#E62', '#EA0', '#19F', '#333' ]
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input"
+      data-huebee='{ "customColors": [ "#C25", "#E62", "#EA0", "#19F", "#333" ], "staticOpen": true }' />
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>mode</h3>
+
+<p>Text syntax of colors.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    // default
+    // mode: 'shortHex'
+    // #F00, #F80, #FF0
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" value="#F00" data-huebee='{ "staticOpen": true }' />
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    mode: 'hex'
+    // #FF0000, #FF8000, #FFFF00
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" value="#FF0000" data-huebee='{ "mode": "hex", "staticOpen": true }'  />
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    mode: 'hsl'
+    // hsl(0, 100%, 50%), hsl(30, 100%, 50%), hsl(60, 100%, 50%)
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" value="hsl(0, 100%, 50%)" data-huebee='{ "mode": "hsl", "staticOpen": true }' />
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>staticOpen</h3>
+
+<p>Displays open and stays open. Default disabled <code>staticOpen: false</code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    // default
+    // staticOpen: false
+    // open on click or focus
+    // close on click outside or blur
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" data-huebee />
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    staticOpen: true
+    // display open and stay open
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input" data-huebee='{ "staticOpen": true }' />
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>className</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>CSS</h2>
+
+<p>Set the size of the color grid with by setting the size of `.huebee__cursor` in CSS.</p>
+
+``` css
+.huebee__cursor {
+  width: 25px;
+  height: 25px;
+}
+```
+
+<p>Style Huebee with your own CSS.</p>
+
+``` css
+.huebee {
+  transition: none; /* disable reveal/hide transition */ 
+}
+
+.huebee__container {
+  background: #444;
+  border: 1px solid #222;
+  border-radius: 20px;
+}
+
+.huebee__cursor {
+  border: 2px solid #19F;
+}
+
+.huebee__close-button {
+  background: red;
+}
+
+.huebee__close-button__x {
+  stroke-width: 2;
+}
+```
+
+<p>Use `className` option for specificity.</p>
+
+``` html
+<div class="dark-swatch" data-huebee='{ "className": "dark-picker" }'></div>
+<div class="light-swatch" data-huebee='{ "className": "light-picker" }'></div>
+```
+
+``` css
+.dark-picker .huebee__container {
+  background: #222;
+}
+
+.light-picker .huebee__container {
+  background: #F8F8F8;
+}
+```
+
+{{! ----------------------------------------------------------------- }}
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Properties</h2>
+
+``` js
+hueb.color // => #F00
+// {String} - text color value
+
+hueb.hue // -> 0
+// {Number} - angle of hue of color, 0...360
+
+hueb.sat // -> 1
+// {Number} - saturation of color, 0...1
+
+hueb.lum // -> 0.5
+// {Number} - luminance of color, 0...1
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Methods</h2>
+
+<h3>open</h3>
+
+
+``` js
+hueb.open()
+// opens Huebee
+```
+
+<h3>close</h3>
+
+``` js
+hueb.close()
+// closes Huebee
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Events</h2>
+
+``` js
+hueb.on( 'change', function( color, hue, sat, lum ) {
+  console.log( 'color changed to: ' + color )
+})
+```
 
 </div>

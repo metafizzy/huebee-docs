@@ -1,21 +1,30 @@
 * { box-sizing: border-box; }
 
+/* rem font sizing */
 html {
   font-size: 19px;
 }
 
-body {
+/* font */
+body, input, button {
   font-family: Texta, sans-serif;
+}
+
+body {
   line-height: 1.35;
 }
 
 /* ---- headers ---- */
 
-h2 { font-size: 1.8rem; }
+h2 { font-size: 2.0rem; }
 
 h3 { font-size: 1.4rem; }
 
 /* ----  ---- */
+
+ul, ol {
+  padding-left: 25px;
+}
 
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
