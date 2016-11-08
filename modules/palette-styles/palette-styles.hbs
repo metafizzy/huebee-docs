@@ -1,12 +1,11 @@
 <style id="palette-styles">
   a { color: {{paletteColors.[1]}}; }
   a:hover { color: {{paletteColors.[3]}}; }
+  .main h2 { color: {{paletteColors.[2]}}; }
   {{#each paletteColors}}
     .color{{@index}}-text,
     .color{{@index}}-text-hover:hover { color: {{this}}; }
     .color{{@index}}-bg,
     .color{{@index}}-bg-hover:hover { background-color: {{this}}; }
-    .color{{@index}}-border,
-    .color{{@index}}-border-hover:hover { border-color: {{this}}; }
   {{/each}}
 </style>

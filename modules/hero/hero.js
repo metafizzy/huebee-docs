@@ -68,12 +68,11 @@ HD.hero = function( elem ) {
         '{ color: ' + color + '; } \n';
       text += selector + '-bg, ' + selector + '-bg-hover:hover ' +
         '{ background-color: ' + color + '; } \n';
-      text += selector + '-border, ' + selector + '-border-hover:hover ' +
-        '{ border-color: ' + color + '; } \n';
     });
-    // link color
+    // extras
     text += 'a { color: ' + palette[1] + '; }';
     text += 'a:hover { color: ' + palette[3] + '; }';
+    text += '.main h2 { color: ' + palette[2] + '; }';
 
     styleElem.textContent = text;
   }
