@@ -1,0 +1,14 @@
+/* custom-style
+------------------------- */
+
+.huebee--dynamic-custom-style {
+  transition: none; /* disable reveal/hide transition */ 
+}
+
+.huebee--dynamic-custom-style .huebee__close-button {
+  background: red;
+}
+
+.huebee--dynamic-custom-style .huebee__close-button__x {
+  stroke-width: 2;
+}

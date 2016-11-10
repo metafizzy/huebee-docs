@@ -1,0 +1,13 @@
+/* custom-style
+------------------------- */
+
+.huebee--static-custom-style .huebee__container {
+  top: 20px;
+  background: #777;
+  border: 5px solid #222;
+  border-radius: 0;
+}
+
+.huebee--static-custom-style .huebee__cursor {
+  border: 5px solid #19F;
+}

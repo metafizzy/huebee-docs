@@ -471,11 +471,6 @@ className: 'custom-huebee-class'
 <div class="duo example">
   <div class="duo__cell example__code">
     ``` css
-    .huebee {
-      /* disable reveal/hide transition */ 
-      transition: none;
-    }
-
     .huebee__container {
       top: 20px; /* position */
       background: #777;
@@ -485,6 +480,20 @@ className: 'custom-huebee-class'
 
     .huebee__cursor {
       border: 5px solid #19F;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    {{> static-custom-style}}
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` css
+    .huebee {
+      /* disable reveal/hide transition */ 
+      transition: none;
     }
 
     .huebee__close-button {
@@ -497,7 +506,7 @@ className: 'custom-huebee-class'
     ```
   </div>
   <div class="duo__cell example__demo">
-    {{> custom-style}}
+    {{> dynamic-custom-style}}
   </div>
 </div>
 
