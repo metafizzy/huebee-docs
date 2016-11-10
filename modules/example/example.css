@@ -1,0 +1,10 @@
+/* example
+------------------------- */
+
+.example {
+  margin: 20px 0;
+}
+
+.example__code pre:first-child {
+  margin-top: 0;
+}

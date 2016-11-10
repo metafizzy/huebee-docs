@@ -127,7 +127,7 @@
 // initialize on single element with selector string
 var hueb = new Huebee( '.color-input', {
   // options
-  setBGColor: true,
+  notation: 'hex',
   saturations: 2,
 });
 ```
@@ -178,7 +178,7 @@ $('.color-input').each( function( i, input ) {
 <p>Options can be set in value of <code>data-huebee</code>. Options set in HTML must be valid JSON. Keys need to be quoted, for example <code>"setBGColor"</code>:. The <code>data-huebee</code> attribute value is set with single quotes <code>'{...}'</code>, but JSON entities use double-quotes <code>"string"</code>.</p>
 
 ``` html
-<input class="color-input" data-huebee='{ "setBGColor": true, "saturations": 2 }' />
+<input class="color-input" data-huebee='{ "notation": "hex", "saturations": 2 }' />
 ```
 
 {{! ----------------------------------------------------------------- }}
@@ -360,15 +360,15 @@ $('.color-input').each( function( i, input ) {
 
 {{! ----------------------------------------------------------------- }}
 
-<h3>mode</h3>
+<h3>notation</h3>
 
-<p>Text syntax of colors.</p>
+<p>Text syntax of colors values.</p>
 
 <div class="duo example">
   <div class="duo__cell example__code">
     ``` js
     // default
-    // mode: 'shortHex'
+    // notation: 'shortHex'
     // #F00, #F80, #FF0
     ```
   </div>
@@ -380,24 +380,24 @@ $('.color-input').each( function( i, input ) {
 <div class="duo example">
   <div class="duo__cell example__code">
     ``` js
-    mode: 'hex'
+    notation: 'hex'
     // #FF0000, #FF8000, #FFFF00
     ```
   </div>
   <div class="duo__cell example__demo">
-    <input class="demo-input" value="#FF0000" data-huebee='{ "mode": "hex", "staticOpen": true }'  />
+    <input class="demo-input" value="#FF0000" data-huebee='{ "notation": "hex", "staticOpen": true }'  />
   </div>
 </div>
 
 <div class="duo example">
   <div class="duo__cell example__code">
     ``` js
-    mode: 'hsl'
+    notation: 'hsl'
     // hsl(0, 100%, 50%), hsl(30, 100%, 50%), hsl(60, 100%, 50%)
     ```
   </div>
   <div class="duo__cell example__demo">
-    <input class="demo-input" value="hsl(0, 100%, 50%)" data-huebee='{ "mode": "hsl", "staticOpen": true }' />
+    <input class="demo-input" value="hsl(0, 100%, 50%)" data-huebee='{ "notation": "hsl", "staticOpen": true }' />
   </div>
 </div>
 
