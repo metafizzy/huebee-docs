@@ -437,61 +437,93 @@ $('.color-input').each( function( i, input ) {
 
 <h3>className</h3>
 
+<p>Class added to Huebee element. Useful for CSS, see below.</p>
+
+``` js
+className: 'custom-huebee-class'
+```
+
 {{! ----------------------------------------------------------------- }}
 
 <h2>CSS</h2>
 
-<p>Set the size of the color grid with by setting the size of `.huebee__cursor` in CSS.</p>
+<p>Set the size of the color grid with by setting the size of <code>.huebee__cursor</code> in CSS. This allows you to size the color grid responsively with media queries.</p>
 
-``` css
-.huebee__cursor {
-  width: 25px;
-  height: 25px;
-}
-```
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` css
+    /* 25px grid size */
+    .huebee__cursor {
+      width: 25px;
+      height: 25px;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    {{> custom-grid-size}}
+  </div>
+</div>
 
-<p>Style Huebee with your own CSS.</p>
 
-``` css
-.huebee {
-  transition: none; /* disable reveal/hide transition */ 
-}
 
-.huebee__container {
-  background: #444;
-  border: 1px solid #222;
-  border-radius: 20px;
-}
+<p>Style Huebee with your own CSS. Look over <a href="https://unpkg.com/huebee@1/dist/huebee.css">huebee.css</a> to see what styles you can customize.</p>
 
-.huebee__cursor {
-  border: 2px solid #19F;
-}
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` css
+    .huebee {
+      /* disable reveal/hide transition */ 
+      transition: none;
+    }
 
-.huebee__close-button {
-  background: red;
-}
+    .huebee__container {
+      top: 20px; /* position */
+      background: #777;
+      border: 5px solid #222;
+      border-radius: 0;
+    }
 
-.huebee__close-button__x {
-  stroke-width: 2;
-}
-```
+    .huebee__cursor {
+      border: 5px solid #19F;
+    }
 
-<p>Use `className` option for specificity.</p>
+    .huebee__close-button {
+      background: red;
+    }
 
-``` html
-<div class="dark-swatch" data-huebee='{ "className": "dark-picker" }'></div>
-<div class="light-swatch" data-huebee='{ "className": "light-picker" }'></div>
-```
+    .huebee__close-button__x {
+      stroke-width: 2;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    {{> custom-style}}
+  </div>
+</div>
 
-``` css
-.dark-picker .huebee__container {
-  background: #222;
-}
+<p>Use <code>className</code> option for specificity.</p>
 
-.light-picker .huebee__container {
-  background: #F8F8F8;
-}
-```
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` html
+    <input data-huebee='{ "className": "dark-picker" }' />
+    <input data-huebee='{ "className": "light-picker" }' />
+    ```
+
+    ``` css
+    .dark-picker .huebee__container {
+      background: #222;
+    }
+
+    .light-picker .huebee__container {
+      background: #F8F8F8;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    {{> classname-style}}
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}
 

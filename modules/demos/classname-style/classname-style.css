@@ -1,0 +1,14 @@
+/* classname-style
+------------------------- */
+
+.classname-field {
+  display: inline-block;
+}
+
+.huebee--classname-style-dark .huebee__container {
+  background: #222;
+}
+
+.huebee--classname-style-light .huebee__container {
+  background: #F8F8F8;
+}

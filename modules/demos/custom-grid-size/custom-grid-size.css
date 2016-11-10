@@ -1,0 +1,7 @@
+/* custom-grid-size
+------------------------- */
+
+.huebee--custom-grid-size .huebee__cursor {
+  width: 25px;
+  height: 25px;
+}
