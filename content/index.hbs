@@ -100,20 +100,20 @@
 <script src="/path/to/huebee.pkgd.min.js"></script>
 ```
 
-<p>Huebee works on a container carousel element with a group of cell elements.</p>
+<p>Huebee works on an anchor element.</p>
 
 ``` html
-<div class="color-input">
-  <div class="carousel-cell">...</div>
-  <div class="carousel-cell">...</div>
-  <div class="carousel-cell">...</div>
-  ...
-</div>
+<!-- use inputs so users can set colors with text -->
+<input class="color-input" value="#F80" />
+
+<!-- anchors can be buttons -->
+<button class="color-button">Select color</button>
+
+<!-- anchors can be any element -->
+<span class="current-color">Current color</span>
 ```
 
 <p>There are several ways to initialize Huebee.</p>
-
-
 
 {{! ----------------------------------------------------------------- }}
 
@@ -153,9 +153,16 @@ for ( var i=0; i < elems.length; i++ ) {
 
 <h3>Initialize with jQuery</h3>
 
-<p>You can use Huebee as a jQuery plugin: <code>$(<span class="string">'selector'</span>).huebee()</code>.</p>
+``` js
+// initialize on single element with jQuery
+var elem = $('.color-input')[0];
+var hueb = new Huebee( elem, {
+  // options
+});
+```
 
 ``` js
+// initialize on multiple elements with jQuery
 $('.color-input').each( function( i, input ) {
   var hueb = new Huebee( input, {
     // options
@@ -535,26 +542,6 @@ className: 'custom-huebee-class'
 
 {{! ----------------------------------------------------------------- }}
 
-{{! ----------------------------------------------------------------- }}
-
-<h2>Properties</h2>
-
-``` js
-hueb.color // => #F00
-// {String} - text color value
-
-hueb.hue // -> 0
-// {Number} - angle of hue of color, 0...360
-
-hueb.sat // -> 1
-// {Number} - saturation of color, 0...1
-
-hueb.lum // -> 0.5
-// {Number} - luminance of color, 0...1
-```
-
-{{! ----------------------------------------------------------------- }}
-
 <h2>Methods</h2>
 
 <h3>setColor</h3>
@@ -596,4 +583,22 @@ hueb.close()
 hueb.on( 'change', function( color, hue, sat, lum ) {
   console.log( 'color changed to: ' + color )
 })
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Properties</h2>
+
+``` js
+hueb.color // => #F00
+// {String} - text color value
+
+hueb.hue // -> 0
+// {Number} - angle of hue of color, 0...360
+
+hueb.sat // -> 1
+// {Number} - saturation of color, 0...1
+
+hueb.lum // -> 0.5
+// {Number} - luminance of color, 0...1
 ```
