@@ -2,7 +2,6 @@ HD.hero = function( elem ) {
 
   var pickers = elem.querySelectorAll('.hero-picker');
 
-  var customColors = [ '#C25', '#EA0' ];
   var palette = [];
   var huebs = [];
 
@@ -18,7 +17,6 @@ HD.hero = function( elem ) {
     palette.push( origColor );
     var hueb = new Huebee( picker, {
       setBGColor: true,
-      customColors: customColors,
     });
     hueb.origColor = origColor;
     huebs.push( hueb );
