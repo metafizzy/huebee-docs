@@ -1,6 +1,10 @@
 /* hero
 ------------------------- */
 
+.hero {
+  padding: 40px 0;
+}
+
 /* clearfix */
 .hero__masthead:after {
   content: '';
@@ -12,17 +16,17 @@
   width: 250px;
   height: 250px;
   float: left;
-  margin: 25px;
+  margin: 0 25px;
 }
 
 .hero__masthead__content {
-  padding-top: 40px;
   padding-left: 300px;
 }
 
 .hero__title {
   font-size: 5.0rem;
-  line-height: 1;
+  line-height: 0.75;
+  padding-top: 10px;
   margin: 0;
   color: #EA0;
 }
@@ -30,7 +34,7 @@
 .hero__tagline {
   font-size: 2.0rem;
   color: #777;
-  margin: 0;
+  margin: 0 0 20px;
 }
 
 .hero__pickers {

@@ -1,10 +1,11 @@
-<header class="hero" data-js="hero">
+<header class="hero color2-bg" data-js="hero">
   <div class="container">
+
     <div class="hero__masthead">
       {{> huebee-logo}}
       <div class="hero__masthead__content">
-        <h1 class="hero__title color2-text">Huebee</h1>
-        <p class="hero__tagline color3-text">One-click color picker</p>
+        <h1 class="hero__title color5-text">Huebee</h1>
+        <p class="hero__tagline color0-text">One-click color picker</p>
         <div class="hero__pickers">
           {{#each paletteColors}}
             {{> hero-picker color=this}}
@@ -13,5 +14,8 @@
         </div>
       </div>
     </div>
+
+    {{> big-buttons}}
+
   </div>
 </header>

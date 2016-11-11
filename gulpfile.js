@@ -26,10 +26,10 @@ function getGlobPaths( src ) {
 var data = {
   paletteColors: [
     '#C25',
-    '#E62',
+    '#D82',
     '#EA0',
-    '#19F',
-    '#333',
+    '#08F',
+    '#555',
     '#FFF',
   ]
 };

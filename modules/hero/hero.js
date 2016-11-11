@@ -2,7 +2,7 @@ HD.hero = function( elem ) {
 
   var pickers = elem.querySelectorAll('.hero-picker');
 
-  var customColors = [ '#C25', '#E62', '#EA0', '#19F', '#333' ];
+  var customColors = [ '#C25', '#EA0' ];
   var palette = [];
   var huebs = [];
 
