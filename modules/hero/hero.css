@@ -9,14 +9,15 @@
 }
 
 .hero .huebee-logo {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   float: left;
-  margin-right: 20px;
+  margin: 25px;
 }
 
 .hero__masthead__content {
   padding-top: 40px;
+  padding-left: 300px;
 }
 
 .hero__title {
@@ -30,4 +31,28 @@
   font-size: 2.0rem;
   color: #777;
   margin: 0;
+}
+
+.hero__pickers {
+  margin-bottom: 20px;
+}
+
+.hero__reset-bar {
+  margin: 10px 0;
+}
+
+.hero__reset-button {
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  margin: 0 10px 10px 0;
+  background-color: #F8F8F8;
+  background-image: linear-gradient( hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.1) );
+  border-radius: 5px;
+}
+
+.hero__reset-button:hover {
+  cursor: pointer;
+  background-color: #19F;
+  color: white;
 }

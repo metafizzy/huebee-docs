@@ -4,6 +4,7 @@ HD.hero = function( elem ) {
 
   var customColors = [ '#C25', '#E62', '#EA0', '#19F', '#333' ];
   var palette = [];
+  var huebs = [];
 
   var stripe1 = elem.querySelector('.huebee-logo__stripe1');
   var stripe2 = elem.querySelector('.huebee-logo__stripe2');
@@ -19,11 +20,12 @@ HD.hero = function( elem ) {
       setBGColor: true,
       customColors: customColors,
     });
+    hueb.origColor = origColor;
+    huebs.push( hueb );
     var onChange = getOnChange( i );
     if ( onChange ) {
       hueb.on( 'change', onChange );
     }
-
   }
 
   var changeBehaviors = {
@@ -76,5 +78,12 @@ HD.hero = function( elem ) {
 
     styleElem.textContent = text;
   }
+
+  var resetButton = elem.querySelector('.hero__reset-button');
+  resetButton.addEventListener( 'click', function() {
+    huebs.forEach( function( hueb ) {
+      hueb.setColor( hueb.origColor );
+    });
+  });
 
 };

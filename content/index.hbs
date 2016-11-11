@@ -8,6 +8,12 @@
 
 {{! ----------------------------------------------------------------- }}
 
+<div class="explanation-lead">
+  <p>Huebee is a JavaScript library for creating user-centric color pickers. Most color pickers are machine-centric. They aim to display and provide controls for every possible color (~17M). Huebee displays a limited set of colors (~200) so users can make clear decisions and select a color with a single click.</p>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>Install</h2>
 
 {{! ----------------------------------------------------------------- }}
@@ -175,7 +181,7 @@ $('.color-input').each( function( i, input ) {
 <input class="color-input" data-huebee />
 ```
 
-<p>Options can be set in value of <code>data-huebee</code>. Options set in HTML must be valid JSON. Keys need to be quoted, for example <code>"setBGColor"</code>:. The <code>data-huebee</code> attribute value is set with single quotes <code>'{...}'</code>, but JSON entities use double-quotes <code>"string"</code>.</p>
+<p>Options can be set in value of <code>data-huebee</code>. Options set in HTML must be valid JSON. Keys need to be quoted, for example <code>"notation"</code>:. The <code>data-huebee</code> attribute value is set with single quotes <code>'{...}'</code>, but JSON entities use double-quotes <code>"string"</code>.</p>
 
 ``` html
 <input class="color-input" data-huebee='{ "notation": "hex", "saturations": 2 }' />
@@ -233,12 +239,13 @@ $('.color-input').each( function( i, input ) {
 
 <h3>setBGColor</h3>
 
-<p>Sets elements&rsquo; background color to color. Also sets text color so text is visible with light and  dark colors. Default disabled <code>setBGColor: false</code>.</p>
+<p>Sets elements&rsquo; background color to color. Also sets text color so text is visible with light and  dark colors.</p>
 
 <div class="duo example">
   <div class="duo__cell example__code">
     ``` js
-    setBGColor: true
+    // default
+    // setBGColor: true
     // set background-color of anchor element
     ```
   </div>
@@ -558,8 +565,22 @@ hueb.lum // -> 0.5
 
 <h2>Methods</h2>
 
-<h3>open</h3>
+<h3>setColor</h3>
 
+``` js
+hueb.setColor('pink')
+// sets Huebee color
+// which in turn sets text and background colors if enabled
+// and selects swatch on grid, if matched
+
+// color may be any valid color value
+hueb.setColor('transparent')
+hueb.setColor('#F90')
+hueb.setColor('#BADA55')
+hueb.setColor('hsl(210, 90%, 50%)')
+```
+
+<h3>open</h3>
 
 ``` js
 hueb.open()
