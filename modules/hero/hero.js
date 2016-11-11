@@ -77,7 +77,7 @@ HD.hero = function( elem ) {
     styleElem.textContent = text;
   }
 
-  var resetButton = elem.querySelector('.hero__reset-button');
+  var resetButton = elem.querySelector('.button--reset');
   resetButton.addEventListener( 'click', function() {
     huebs.forEach( function( hueb ) {
       hueb.setColor( hueb.origColor );

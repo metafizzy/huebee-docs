@@ -1,0 +1,29 @@
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` html
+    <div class="button-row">
+      <button data-color="#08F">Blue</button>
+      <button data-color="#2D2">Green</button>
+      <button data-color="#F80">Orange</button>
+    </div>
+    ```
+
+    ``` js
+    buttonRow.addEventListener( 'click', function( event ) {
+      var buttonColor = event.target.getAttribute('data-color');
+      if ( buttonColor ) {
+        hueb.setColor( buttonColor );
+      }
+    });
+    ```
+  </div>
+  <div class="duo__cell example__demo" data-js="set-color">
+    <div class="button-row">
+      <button class="button" data-color="#08F">Blue</button>
+      <button class="button" data-color="#2D2">Green</button>
+      <button class="button" data-color="#F80">Orange</button>
+    </div>
+
+    <input class="demo-input" />
+  </div>
+</div>
