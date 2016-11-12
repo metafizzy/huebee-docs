@@ -24,6 +24,8 @@ function getGlobPaths( src ) {
 }
 
 var data = {
+  productName: 'Huebee',
+  majorVersion: 1,
   paletteColors: [
     '#D28',
     '#F00',
@@ -49,8 +51,10 @@ data.cssPaths = getGlobPaths( cssSrc );
 var jsSrc = [
   // components
   'bower_components/ev-emitter/ev-emitter.js',
+  'bower_components/matches-selector/matches-selector.js',
   'bower_components/unipointer/unipointer.js',
   'bower_components/huebee/huebee.js',
+  'bower_components/fizzy-docs-modules/*/*.js',
   // boilerplate
   'js/boilerplate.js',
   // docs
@@ -65,12 +69,28 @@ data.jsPaths = getGlobPaths( jsSrc );
 
 var hbLayouts = require('handlebars-layouts');
 var highlight = require('./tasks/utils/highlight.js');
+// handlebars helpers
+var helpers = {
+  firstValue: function( ary ) {
+    return ary[0];
+  },
+  lowercase: function( str ) {
+    return str.toLowerCase();
+  },
+  plusOne: function( str ) {
+    return parseInt( str, 10 ) + 1;
+  },
+  slug: function( str ) {
+    return str.replace( /[^\w\d]+/gi, '-' ).toLowerCase();
+  },
+};
 
 gulp.task( 'content', function() {
   gulp.src('content/*.hbs')
     .pipe( extendPageLayout() )
     .pipe( handlebars()
       .data( data )
+      .data('data/*.json')
       .partials( 'layouts/*.hbs')
       .partials( 'modules/**/*/*.hbs', {
         parsePartialName: getPartialBasename,
@@ -79,6 +99,7 @@ gulp.task( 'content', function() {
         parsePartialName: getPartialBasename,
       })
       .helpers( hbLayouts )
+      .helpers( helpers )
     )
     .pipe( highlight() )
     .pipe( rename({ extname: '.html' }))

@@ -1,0 +1,20 @@
+{
+  "developer": {
+    "title": "Developer",
+    "for": "1 developer",
+    "price": "12",
+    "gumroadSlug": "huebee-dev"
+  },
+  "team": {
+    "title": "Team",
+    "for": "up to 8 developers",
+    "price": "60",
+    "gumroadSlug": "huebee-team"
+  },
+  "organization": {
+    "title": "Organization",
+    "for": "Unlimited developers",
+    "price": "180",
+    "gumroadSlug": "huebee-org"
+  }
+}

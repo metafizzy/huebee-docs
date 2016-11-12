@@ -1,2 +1,2 @@
 // global namespace
-window.HD = {};
+window.HuebeeDocs = {};

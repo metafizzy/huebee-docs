@@ -1,4 +1,4 @@
-HD['set-color'] = function( elem ) {
+HuebeeDocs['set-color'] = function( elem ) {
   var input = elem.querySelector('.demo-input');
   var hueb = new Huebee( input, {
     staticOpen: true,

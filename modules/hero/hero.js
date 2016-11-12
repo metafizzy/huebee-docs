@@ -1,4 +1,4 @@
-HD.hero = function( elem ) {
+HuebeeDocs.hero = function( elem ) {
 
   var pickers = elem.querySelectorAll('.hero-picker');
 

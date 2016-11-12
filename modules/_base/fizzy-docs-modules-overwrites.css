@@ -1,4 +1,21 @@
 
+/* ---- buy buttons ---- */
+
+.buy-button {
+  background: hsla(0, 0%, 0%, 0.04);
+}
+
+.buy-button__price {
+  background: #F80;
+}
+
+.buy-button:hover { text-decoration: none; }
+
+.buy-button:hover .buy-button__price {
+  background: #08F;
+}
+
+/* ---- site-footer ---- */
 
 .site-footer {
   background: #F80;
@@ -15,15 +32,15 @@
   color: white;
 }
 
-/* ---- site-footer-links ---- */
+/* ----  ---- */
 
-.site-footer-links__link { color: white; }
+.site-footer__copy a { color: white ;}
 
-.site-footer-links__link:hover {
+.site-footer__twitter-icon { fill: white; }
+
+.site-footer__copy a:hover {
   color: #555;
   text-decoration: none;
 }
 
-.site-footer-links__icon { fill: white; }
-
-.site-footer-links__link:hover .site-footer-links__icon { fill: #555; }
+.site-footer__copy a:hover .site-footer__twitter-icon { fill: #555; }
