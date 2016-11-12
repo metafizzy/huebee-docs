@@ -69,6 +69,8 @@ data.jsPaths = getGlobPaths( jsSrc );
 
 var hbLayouts = require('handlebars-layouts');
 var highlight = require('./tasks/utils/highlight.js');
+var frontMatter = require('gulp-front-matter');
+
 // handlebars helpers
 var helpers = {
   firstValue: function( ary ) {
@@ -87,6 +89,10 @@ var helpers = {
 
 gulp.task( 'content', function() {
   gulp.src('content/*.hbs')
+    .pipe( frontMatter({
+      property: 'data.page',
+      remove: true
+    }) )
     .pipe( extendPageLayout() )
     .pipe( handlebars()
       .data( data )

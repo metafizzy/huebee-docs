@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <title>Huebee</title>
+  <title>Huebee{{#unless page.isHomepage}} &middot; {{page.title}}{{/unless}}</title>
 
   {{#each cssPaths}}
     <link rel="stylesheet" href="../{{this}}" />
@@ -15,8 +15,11 @@
 </head>
 <body class="color4-text color5-bg">
 
-{{> hero}}
-
+{{#if page.isHomepage}}
+  {{> hero}}
+{{else}}
+  {{> site-header}}
+{{/if}}
 
 <div class="main">
   <div class="container">
