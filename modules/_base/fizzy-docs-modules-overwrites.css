@@ -1,0 +1,29 @@
+
+
+.site-footer {
+  background: #F80;
+}
+
+/* ---- showcase ---- */
+
+.showcase-item__link {
+  background: white;
+}
+
+.showcase-item__link:hover {
+  background: #D28;
+  color: white;
+}
+
+/* ---- site-footer-links ---- */
+
+.site-footer-links__link { color: white; }
+
+.site-footer-links__link:hover {
+  color: #555;
+  text-decoration: none;
+}
+
+.site-footer-links__icon { fill: white; }
+
+.site-footer-links__link:hover .site-footer-links__icon { fill: #555; }

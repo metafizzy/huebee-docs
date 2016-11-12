@@ -1,0 +1,7 @@
+/* hero-picker
+------------------------- */
+
+.hero-picker {
+  width: 30%;
+  width: calc( (100% - 40px) / 3);
+}

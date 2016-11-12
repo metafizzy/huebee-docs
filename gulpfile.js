@@ -38,6 +38,7 @@ var data = {
 
 var cssSrc = [
   'bower_components/*/*.css',
+  'bower_components/fizzy-docs-modules/*/*.css',
   'modules/**/*/*.css',
 ];
 
@@ -72,16 +73,21 @@ gulp.task( 'content', function() {
       .data( data )
       .partials( 'layouts/*.hbs')
       .partials( 'modules/**/*/*.hbs', {
-        parsePartialName: function( options, file ) {
-          return path.basename( file.path, '.hbs' );
-        }
-      } )
+        parsePartialName: getPartialBasename,
+      })
+      .partials( 'bower_components/fizzy-docs-modules/*/*.hbs', {
+        parsePartialName: getPartialBasename,
+      })
       .helpers( hbLayouts )
     )
     .pipe( highlight() )
     .pipe( rename({ extname: '.html' }))
     .pipe( gulp.dest('build') );
 });
+
+function getPartialBasename( options, file ) {
+  return path.basename( file.path, '.hbs' );
+}
 
 var transfob = require('transfob');
 
