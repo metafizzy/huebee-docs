@@ -44,3 +44,41 @@
 }
 
 .site-footer__copy a:hover .site-footer__twitter-icon { fill: #555; }
+
+/* ---- metafizzy-brand ---- */
+
+.metafizzy-logo {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.metafizzy-wordmark {
+  width: 230px;
+}
+
+.metafizzy-brand__link {
+  display: inline-block;
+}
+
+.metafizzy-wordmark,
+.metafizzy-logo__outline,
+.metafizzy-logo__eyes-nose { fill: white; }
+
+.metafizzy-logo__snout,
+.metafizzy-logo__stripe1,
+.metafizzy-logo__stripe2,
+.metafizzy-logo__stripe3,
+.metafizzy-logo__stripe4 { fill: #F80; }
+
+.metafizzy-brand__link:hover { text-decoration: none; }
+
+.metafizzy-brand__link:hover .metafizzy-wordmark,
+.metafizzy-brand__link:hover .metafizzy-logo__outline,
+.metafizzy-brand__link:hover .metafizzy-logo__eyes-nose { fill: #555; }
+
+.metafizzy-brand__link:hover .metafizzy-logo__stripe1 { fill: #D28; }
+.metafizzy-brand__link:hover .metafizzy-logo__stripe2 { fill: #F00; }
+.metafizzy-brand__link:hover .metafizzy-logo__stripe3 { fill: #F80; }
+.metafizzy-brand__link:hover .metafizzy-logo__stripe4 { fill: #08F; }
+
+.metafizzy-brand__link:hover .metafizzy-logo__snout { fill: white; }
