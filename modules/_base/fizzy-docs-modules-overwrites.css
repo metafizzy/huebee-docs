@@ -40,18 +40,18 @@
   color: white;
 }
 
-/* ----  ---- */
+/* ---- site-footer ---- */
 
 .site-footer__copy a { color: white ;}
 
-.site-footer__twitter-icon { fill: white; }
+.site-footer .twitter-logo { fill: white; }
 
 .site-footer__copy a:hover {
   color: #555;
   text-decoration: none;
 }
 
-.site-footer__copy a:hover .site-footer__twitter-icon { fill: #555; }
+.site-footer__copy a:hover .twitter-logo { fill: #555; }
 
 /* ---- metafizzy-brand ---- */
 
