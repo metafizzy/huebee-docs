@@ -56,12 +56,12 @@
 /* ---- metafizzy-brand ---- */
 
 .metafizzy-logo {
-  width: 60px;
-  margin-right: 10px;
+  width: 40px;
+  margin-right: 5px;
 }
 
 .metafizzy-wordmark {
-  width: 230px;
+  width: 160px;
 }
 
 .metafizzy-brand__link {
@@ -90,3 +90,14 @@
 .metafizzy-brand__link:hover .metafizzy-logo__stripe4 { fill: #08F; }
 
 .metafizzy-brand__link:hover .metafizzy-logo__snout { fill: white; }
+
+@media screen and ( min-width: 768px ) {
+  .metafizzy-logo {
+    width: 60px;
+    margin-right: 10px;
+  }
+
+  .metafizzy-wordmark {
+    width: 230px;
+  }
+}

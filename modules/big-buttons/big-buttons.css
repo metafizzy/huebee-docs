@@ -8,10 +8,9 @@
 }
 
 .big-button {
-  float: left;
-  width: 32%;
+  display: block;
   padding: 10px;
-  margin-right: 2%;
+  margin-bottom: 10px;
   border-radius: 5px;
   text-decoration: none;
   line-height: 1.0;
@@ -37,4 +36,13 @@
 
 .big-button--outline {
   border: 2px solid;
+}
+
+@media screen and ( min-width: 768px ) {
+  .big-button {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+  }
+
 }

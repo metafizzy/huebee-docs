@@ -9,3 +9,10 @@
 
 /* for site-nav offset */
 .main .container { position: relative; }
+
+/* legible line length */
+/*.main p,
+.main ol,
+.main ul {
+  max-width: 40em;
+}*/

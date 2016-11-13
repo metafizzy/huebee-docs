@@ -6,6 +6,18 @@
   list-style: none;
 }
 
+.site-nav__item {
+  display: inline-block;
+}
+
+.site-nav__item:after {
+  content: ' • '
+}
+
+.site-nav__item:last-child:after {
+  content: none;
+}
+
 .page--index .site-nav__item--index a,
 .page--extras .site-nav__item--extras a,
 .page--license .site-nav__item--license a {
@@ -22,6 +34,14 @@
 
   .site-nav.is-fixed {
     position: fixed;
+  }
+
+  .site-nav__item {
+    display: block;
+  }
+
+  .site-nav__item:after {
+    content: none;
   }
 
 }

@@ -7,5 +7,25 @@
 }
 
 .page-nav__item {
+  display: inline-block;
   font-size: 0.9rem;
+}
+
+
+.page-nav__item:after {
+  content: ' • '
+}
+
+.page-nav__item:last-child:after {
+  content: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .page-nav__item {
+    display: block;
+  }
+
+  .page-nav__item:after {
+    content: none;
+  }
 }

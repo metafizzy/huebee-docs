@@ -2,7 +2,7 @@
 ------------------------- */
 
 .hero {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 /* clearfix */
@@ -13,28 +13,52 @@
 }
 
 .hero .huebee-logo {
-  width: 250px;
-  height: 250px;
+  width: 60px;
+  height: 60px;
   float: left;
-  margin: 0 25px;
-}
-
-.hero__masthead__content {
-  padding-left: 300px;
+  margin-right: 10px;
 }
 
 .hero__title {
-  font-size: 5.0rem;
+  font-size: 2.5rem;
   line-height: 0.75;
-  padding-top: 10px;
   margin: 0;
 }
 
 .hero__tagline {
-  font-size: 2.0rem;
+  font-size: 1.2rem;
   margin: 0 0 20px;
 }
 
 .hero__pickers {
   margin-bottom: 20px;
+}
+
+@media screen and ( min-width: 768px ) {
+
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero .huebee-logo {
+    width: 250px;
+    height: 250px;
+    margin: 0 25px;
+  }
+
+  .hero__masthead__content {
+    padding-left: 300px;
+  }
+
+  
+  .hero__title {
+    font-size: 5.0rem;
+    padding-top: 10px;
+  }
+
+  .hero__tagline {
+    font-size: 2.0rem;
+    margin: 0 0 20px;
+  }
+
 }

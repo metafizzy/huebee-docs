@@ -2,6 +2,12 @@
 ------------------------- */
 
 .hero-picker {
-  width: 30%;
-  width: calc( (100% - 40px) / 3);
+  width: 45%;
+}
+
+@media screen and ( min-width: 768px ) {
+  .hero-picker {
+    width: 30%;
+     width: calc( (100% - 40px) / 3);
+  }
 }
