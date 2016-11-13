@@ -17,6 +17,12 @@
 
 /* ---- site-footer ---- */
 
+*[data-license-property] {
+  color: #08F;
+}
+
+/* ---- site-footer ---- */
+
 .site-footer {
   background: #F80;
   position: relative;
