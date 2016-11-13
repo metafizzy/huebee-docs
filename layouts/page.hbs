@@ -13,7 +13,7 @@
   {{> palette-styles}}
 
 </head>
-<body class="color4-text color5-bg">
+<body class="page--{{@file.basename}} color4-text color5-bg">
 
 {{#if page.isHomepage}}
   {{> hero}}
@@ -23,6 +23,9 @@
 
 <div class="main">
   <div class="container">
+
+    {{> site-nav}}
+
 {{#block "main"}}{{/block}}
   </div>
 </div>

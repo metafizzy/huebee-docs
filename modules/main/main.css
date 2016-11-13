@@ -6,3 +6,6 @@
   padding-top: 20px;
   border-top: 4px solid;
 }
+
+/* for site-nav offset */
+.main .container { position: relative; }

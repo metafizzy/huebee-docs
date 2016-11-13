@@ -68,14 +68,13 @@ data.jsPaths = getGlobPaths( jsSrc );
 // -------------------------- content -------------------------- //
 
 var hbLayouts = require('handlebars-layouts');
-var highlight = require('./tasks/utils/highlight.js');
 var frontMatter = require('gulp-front-matter');
+var path = require('path');
+var highlight = require('./tasks/utils/highlight.js');
+var pageNav = require('./tasks/utils/page-nav.js');
 
 // handlebars helpers
 var helpers = {
-  firstValue: function( ary ) {
-    return ary[0];
-  },
   lowercase: function( str ) {
     return str.toLowerCase();
   },
@@ -93,6 +92,11 @@ gulp.task( 'content', function() {
       property: 'data.page',
       remove: true
     }) )
+    // add basename
+    .pipe( transfob( function( file, enc, next ) {
+      file.basename = path.basename( file.path, '.hbs' );
+      next( null, file );
+    }))
     .pipe( extendPageLayout() )
     .pipe( handlebars()
       .data( data )
@@ -107,6 +111,7 @@ gulp.task( 'content', function() {
       .helpers( hbLayouts )
       .helpers( helpers )
     )
+    .pipe( pageNav() )
     .pipe( highlight() )
     .pipe( rename({ extname: '.html' }))
     .pipe( gulp.dest('build') );
@@ -122,8 +127,8 @@ var transfob = require('transfob');
 function extendPageLayout() {
   return transfob( function( file, enc, next ) {
     var contents = file.contents.toString();
-    contents = '{{#extend "page"}}{{#content "main"}}' + contents +
-      '{{/content}}{{/extend}}';
+    contents = '{{#extend "page"}}{{#content "main"}}MAIN_START' + contents +
+      'MAIN_END{{/content}}{{/extend}}';
     file.contents = new Buffer( contents );
     next( null, file );
   });

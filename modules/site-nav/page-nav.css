@@ -1,0 +1,11 @@
+/* page-nav
+------------------------- */
+
+.page-nav {
+  padding: 0;
+  list-style: none;
+}
+
+.page-nav__item {
+  font-size: 0.9rem;
+}

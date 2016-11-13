@@ -19,6 +19,8 @@
 
 .site-footer {
   background: #F80;
+  position: relative;
+  z-index: 1; /* above site-nav */
 }
 
 /* ---- showcase ---- */

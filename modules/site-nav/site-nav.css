@@ -1,0 +1,22 @@
+/* site-nav
+------------------------- */
+
+.site-nav__list {
+  padding: 0;
+  list-style: none;
+}
+
+.page--index .site-nav__item--index a,
+.page--extras .site-nav__item--extras a,
+.page--license .site-nav__item--license a {
+  color: #08F;
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    width: 200px;
+    position: fixed;
+    left: 1000px;
+    top: 20px;
+  }
+}
