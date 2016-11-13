@@ -3,8 +3,6 @@
 
 .hero {
   padding: 40px 0;
-  position: relative;
-  z-index: 1; /* above site-nav */
 }
 
 /* clearfix */

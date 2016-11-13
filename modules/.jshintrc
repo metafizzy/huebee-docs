@@ -3,7 +3,7 @@
   "unused": true,
   "undef": true,
   "globals": {
-    "HD": false,
+    "HuebeeDocs": false,
     "Huebee": false
   }
 }

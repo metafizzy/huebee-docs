@@ -15,8 +15,13 @@
 @media screen and (min-width: 1200px) {
   .site-nav {
     width: 200px;
-    position: fixed;
+    position: absolute;
     left: 1000px;
-    top: 20px;
+    top: 0px;
   }
+
+  .site-nav.is-fixed {
+    position: fixed;
+  }
+
 }
