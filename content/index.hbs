@@ -5,7 +5,7 @@ isHomepage: true
 {{! ----------------------------------------------------------------- }}
 
 <div class="explanation-lead">
-  <p>Huebee is a JavaScript library for creating user-centric color pickers. Most color pickers are machine-centric. They aim to display and provide controls for every possible color (~17M). Huebee displays a limited set of colors (~200) so users can make clear decisions and select a color with a single click.</p>
+  <p>Huebee is a JavaScript library for creating user-centric color pickers. Huebee displays a limited set of colors so users view all colors at a glance, make clear decisions, and select a color with a single click.</p>
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -117,13 +117,19 @@ isHomepage: true
 <span class="current-color">Current color</span>
 ```
 
-<p>There are several ways to initialize Huebee.</p>
+<p>The Huebee color picker will open whenever the anchor is clicked or focused.</p>
 
 {{! ----------------------------------------------------------------- }}
 
 <h3>Initialize with vanilla JavaScript</h3>
 
-<p>You can use Huebee with vanilla JS: <code><span class="keyword">new</span> Huebee( elem )</code>. The <code>Huebee()</code> constructor accepts two arguments: the anchor element and an options object.</p>
+``` js
+var hueb = new Huebee( element, options )
+// element => {Element} anchor element, or
+//            {String} selector string
+// options => {Object}
+// hueb => Huebee instance
+```
 
 ``` js
 // initialize on single element with selector string
@@ -167,8 +173,8 @@ var hueb = new Huebee( elem, {
 
 ``` js
 // initialize on multiple elements with jQuery
-$('.color-input').each( function( i, input ) {
-  var hueb = new Huebee( input, {
+$('.color-input').each( function( i, elem ) {
+  var hueb = new Huebee( elem, {
     // options
   });
 });
@@ -502,7 +508,7 @@ className: 'custom-huebee-class'
   <div class="duo__cell example__code">
     ``` css
     .huebee {
-      /* disable reveal/hide transition */ 
+      /* disable reveal/hide transition */
       transition: none;
     }
 
