@@ -1,0 +1,108 @@
+---
+title: Extras
+---
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Module loaders</h2>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Webpack</h3>
+
+<p>Install Huebee with npm.</p>
+
+``` bash
+npm install huebee
+```
+
+<p>You can then <code>require('huebee')</code>.</p>
+
+``` js
+// main.js
+var Huebee = require('huebee');
+
+var hueb = new Huebee( '.color-input', {
+  // options
+});
+```
+
+<p>Run webpack.</p>
+
+``` bash
+webpack main.js bundle.js
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>RequireJS</h3>
+
+<p>You can require <code>huebee.pkgd.js</code>.</p>
+
+``` js
+requirejs( [
+  'path/to/huebee.pkgd.js',
+], function( Huebee ) {
+  var hueb = new Huebee( '.color-input', {
+    // options
+  });
+});
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Browserify</h3>
+
+<p>Install Huebee with npm.</p>
+
+``` bash
+npm install huebee
+```
+
+<p>You can then <code>require('huebee')</code>.</p>
+
+``` js
+var Huebee = require('huebee');
+
+var hueb = new Huebee( '.color-input', {
+  // options
+});
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Browser support</h2>
+
+<p>Huebee v1 supports IE10+, Android 4+, Safari for iOS 5+, Firefox 16+, and Chrome 12+.</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Issues</h2>
+
+<h3>Reduced test cases</h3>
+
+<p>Creating a reduced test case is the best way to debug problems and report issues. Read <a href="http://css-tricks.com/reduced-test-cases/">CSS Tricks</a> on why they&rsquo;re so great.</p>
+
+<p>Create a reduced test case for Flickity by forking any one of the <a href="http://codepen.io/desandro/tag/huebee-docs">CodePen demos</a> from these docs.</p>
+
+<ul>
+  <li>A reduced test case clearly demonstrates the bug or issue.</li>
+  <li>It contains the bare minimum HTML, CSS, and JavaScript required to demonstrate the bug.</li>
+  <li>A link to your production site is <b>not</b> a reduced test case.</li>
+</ul>
+
+<p>Creating a reduced test case is the best way to get your issue addressed. They help you point out the problem. They help me debug the problem. They help others understand the problem.</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Submitting issues</h3>
+
+<p>Report <a href="https://github.com/metafizzy/huebee/issues/">issues on GitHub</a>. Make sure to include a <strong>reduced test case</strong>. Without a reduced test case, your issue may be closed.</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Feature requests</h3>
+
+<p>Help me select new features by looking over <a href="https://github.com/metafizzy/huebee/labels/feature%20request">requested features on the GitHub issue tracker</a> and adding your <strong>+1 reaction</strong> (not a "+1" comment) to features you&rsquo;d like to see added. Please do not add "+1" comments — they will be deleted. Subscribe to the issue using the button in the sidebar to get updates.</p>
+
+{{! ----------------------------------------------------------------- }}
