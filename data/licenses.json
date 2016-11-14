@@ -1,19 +1,19 @@
 {
   "developer": {
     "title": "Developer",
-    "for": "1 developer",
+    "for": "1 team member",
     "price": "12",
     "gumroadSlug": "huebee-dev"
   },
   "team": {
     "title": "Team",
-    "for": "up to 8 developers",
+    "for": "up to 8 team members",
     "price": "60",
     "gumroadSlug": "huebee-team"
   },
   "organization": {
     "title": "Organization",
-    "for": "Unlimited developers",
+    "for": "Unlimited team members",
     "price": "180",
     "gumroadSlug": "huebee-org"
   }
