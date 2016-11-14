@@ -5,6 +5,7 @@ var getGlobPaths = require('./utils/get-glob-paths');
 var cssSrc = [
   'bower_components/*/*.css',
   'bower_components/fizzy-docs-modules/*/*.css',
+  'css/*.css',
   'modules/**/*/*.css',
 ];
 
