@@ -16,22 +16,7 @@
 
   {{> palette-styles}}
 
-  {{! Twitter card }}
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@metafizzyco" />
-  <meta name="twitter:title" content="Huebee{{#unless page.isHomepage}} &middot; {{page.title}}{{/unless}}" />
-  {{! Facebook OpenGraph }}
-  <meta property="og:url" content="http://huebee.buzz{{#unless page.isHomepage}}/{{@file.basename}}.html{{/unless}}" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Huebee{{#unless page.isHomepage}} &middot; {{page.title}}{{/unless}}" />
-  <meta property="og:site_name" content="Metafizzy" />
-  {{! description }}
-  <meta name="description" content="{{page.description}}" />
-  <meta name="twitter:description" content="{{page.description}}" />
-  <meta property="og:description" content="{{page.description}}" />
-  {{! image }}
-  <meta name="twitter:image" content="/img/huebee-brand.png" />
-  <meta property="og:image" content="/img/huebee-brand.png" />
+  {{> head-meta}}
 
 </head>
 <body class="page--{{@file.basename}} color4-text color5-bg">
