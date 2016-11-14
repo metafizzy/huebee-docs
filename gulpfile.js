@@ -1,27 +1,12 @@
 /* jshint node: true, unused: true, undef: true */
 
-var glob = require('glob');
 var gulp = require('gulp');
 var handlebars = require('gulp-hb');
 var rename = require('gulp-rename');
 var path = require('path');
+var getGlobPaths = require('./tasks/utils/get-glob-paths.js');
 
 // -------------------------- setup -------------------------- //
-
-function getGlobPaths( src ) {
-  var paths = [];
-  // expand paths
-  src.forEach( function( path ) {
-    if ( glob.hasMagic( path ) ) {
-      var files = glob.sync( path );
-      paths = paths.concat( files );
-    } else {
-      paths.push( path );
-    }
-  });
-
-  return paths;
-}
 
 var data = {
   productName: 'Huebee',
@@ -35,6 +20,21 @@ var data = {
     '#FFF',
   ]
 };
+
+// -------------------------- assets -------------------------- //
+
+// move anything in assets/ to build/
+gulp.task( 'asset-files', function() {
+  return gulp.src('assets/**/*.*')
+    .pipe( gulp.dest('build') );
+});
+
+gulp.task( 'fonts', function() {
+  return gulp.src('fonts/*.*')
+    .pipe( gulp.dest('build/fonts') );
+});
+
+gulp.task( 'assets', [ 'asset-files', 'fonts' ] );
 
 // -------------------------- css -------------------------- //
 
@@ -137,6 +137,7 @@ function extendPageLayout() {
 // --------------------------  -------------------------- //
 
 gulp.task( 'default', [
+  'assets',
   'content',
 ]);
 
