@@ -17,6 +17,6 @@
   ],
   "dependencies": {
     "normalize-css": "^5.0.0",
-    "huebee": "../huebee"
+    "huebee": "^1.0.0"
   }
 }
