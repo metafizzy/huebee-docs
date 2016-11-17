@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="../{{this}}" />
     {{/each}}
   {{else}}
-    <link rel="stylesheet" href="css/huebee-docs.css?{{cacheVersions.css}}" />
+    <link rel="stylesheet" href="{{page.rootPath}}css/huebee-docs.css?{{cacheVersions.css}}" />
   {{/if}}
 
   {{> palette-styles}}
@@ -43,7 +43,7 @@
     <script src="../{{this}}"></script>
   {{/each}}
 {{else}}
-  <script src="js/huebee-docs.min.js?{{cacheVersions.js}}"></script>
+  <script src="{{page.rootPath}}js/huebee-docs.min.js?{{cacheVersions.js}}"></script>
 {{/if}}
 
 {{#unless isDev}}
