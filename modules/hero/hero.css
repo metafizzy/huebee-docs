@@ -12,12 +12,22 @@
   clear: both;
 }
 
-.hero .huebee-logo {
+/* ---- logo ---- */
+
+.hero .huebee-illo {
   width: 60px;
   height: 60px;
   float: left;
   margin-right: 10px;
 }
+
+.hero .huebee-illo__stripe1 { fill: #D28; }
+.hero .huebee-illo__stripe2 { fill: #F00; }
+.hero .huebee-illo__stripe3 { fill: #F80; }
+.hero .huebee-illo__stripe4 { fill: #08F; }
+.hero .huebee-illo__line { stroke: #555; }
+
+/* ----  ---- */
 
 .hero__title {
   font-size: 2.5rem;
@@ -34,16 +44,18 @@
   margin-bottom: 20px;
 }
 
+/* ----  ---- */
+
 @media screen and ( min-width: 768px ) {
 
   .hero {
     padding: 40px 0;
   }
 
-  .hero .huebee-logo {
-    width: 250px;
-    height: 250px;
-    margin: 0 25px;
+  .hero .huebee-illo {
+    width: 280px;
+    height: 280px;
+    margin: 0 10px;
   }
 
   .hero__masthead__content {

@@ -5,11 +5,11 @@ HuebeeDocs.hero = function( elem ) {
   var palette = [];
   var huebs = [];
 
-  var stripe1 = elem.querySelector('.huebee-logo__stripe1');
-  var stripe2 = elem.querySelector('.huebee-logo__stripe2');
-  var stripe3 = elem.querySelector('.huebee-logo__stripe3');
-  var stripe4 = elem.querySelector('.huebee-logo__stripe4');
-  var lines = elem.querySelectorAll('.huebee-logo__line');
+  var stripe1 = elem.querySelector('.huebee-illo__stripe1');
+  var stripe2 = elem.querySelector('.huebee-illo__stripe2');
+  var stripe3 = elem.querySelector('.huebee-illo__stripe3');
+  var stripe4 = elem.querySelector('.huebee-illo__stripe4');
+  var lines = elem.querySelectorAll('.huebee-illo__line');
 
   for ( var i=0; i < pickers.length; i++ ) {
     var picker = pickers[i];

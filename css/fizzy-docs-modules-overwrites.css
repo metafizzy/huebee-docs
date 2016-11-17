@@ -53,6 +53,11 @@
 
 .site-footer__copy a:hover .twitter-logo { fill: #555; }
 
+/* ----  ---- */
+
+.showcase .logo-pizza-illo { background: white; }
+.showcase .packery-illo { background: white; }
+
 /* ---- metafizzy-brand ---- */
 
 .metafizzy-logo {

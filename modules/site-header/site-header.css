@@ -5,10 +5,16 @@
   padding: 20px 0;
 }
 
-.site-header .huebee-logo {
+.site-header .huebee-illo {
   width: 60px;
   vertical-align: bottom;
 }
+
+.site-header .huebee-illo__stripe1 { fill: #D28; }
+.site-header .huebee-illo__stripe2 { fill: #F00; }
+.site-header .huebee-illo__stripe3 { fill: #F80; }
+.site-header .huebee-illo__stripe4 { fill: #08F; }
+.site-header .huebee-illo__line { stroke: #555; }
 
 .site-header__title {
   font-size: 3.0rem;
