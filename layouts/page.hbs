@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="{{#if isExport}}export{{/if}}">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width" />
@@ -16,7 +16,9 @@
 
   {{> palette-styles}}
 
-  {{> head-meta}}
+  {{#unless isExport}}
+    {{> head-meta}}
+  {{/unless}}
 
 </head>
 <body class="page--{{@file.basename}} color4-text color5-bg">
@@ -46,7 +48,7 @@
   <script src="{{page.rootPath}}js/huebee-docs.min.js?{{cacheVersions.js}}"></script>
 {{/if}}
 
-{{#unless isDev}}
+{{#unless isExport}}
   <script>
     window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
     ga('create','UA-58739927-6','auto');ga('send','pageview')

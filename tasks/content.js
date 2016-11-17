@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var hbLayouts = require('handlebars-layouts');
 var frontMatter = require('gulp-front-matter');
+var filter = require('gulp-filter');
 var path = require('path');
 var handlebars = require('gulp-hb');
 var rename = require('gulp-rename');
@@ -30,7 +31,11 @@ var partialsSrc = 'modules/**/*/*.hbs';
 module.exports = function( data, watch ) {
 
   gulp.task( 'content', function() {
+    // exclude 404 if export
+    var filterQuery = data.isExport ? [ '**', '!**/404.*'] : '**';
+
     gulp.src( contentSrc )
+      .pipe( filter( filterQuery ) )
       .pipe( frontMatter({
         property: 'data.page',
         remove: true

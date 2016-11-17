@@ -1,13 +1,12 @@
 * { box-sizing: border-box; }
 
 /* rem font sizing */
-html {
-  font-size: 17px;
-}
+html { font-size: 17px; }
+html.export { font-size: 14px; }
 
 /* font */
 body, input, button {
-  font-family: Texta, sans-serif;
+  font-family: Texta, Avenir Next, sans-serif;
 }
 
 body {
@@ -66,9 +65,8 @@ pre code {
 
 
 @media screen and ( min-width: 768px ) {
-  html {
-    font-size: 19px;
-  }
+  html { font-size: 19px; }
+  html.export { font-size: 16px; }
 
   pre, code, kbd { font-size: 15px; }
 
