@@ -608,11 +608,17 @@ hueb.close()
 
 <h2>Events</h2>
 
+{{! ----------------------------------------------------------------- }}
+
+<h3>change</h3>
+
 ``` js
 hueb.on( 'change', function( color, hue, sat, lum ) {
   console.log( 'color changed to: ' + color )
 })
 ```
+
+{{> change-svg}}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -630,4 +636,8 @@ hueb.sat // -> 1
 
 hueb.lum // -> 0.5
 // {Number} - luminance of color, 0...1
+
+hueb.isLight // -> false
+// {Boolean} - true if color is light, false is color is dark
+// useful for setting legible text color on top of color
 ```

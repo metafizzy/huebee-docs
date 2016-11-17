@@ -1,0 +1,23 @@
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    // use change event to change SVG fill & stroke
+    fillHueb.on( 'change', function( color ) {
+      circle.style.fill = color;
+    });
+
+    strokeHueb.on( 'change', function( color ) {
+      circle.style.stroke = color;
+    });
+    ```
+  </div>
+  <div class="example__demo duo__cell" data-js="change-svg">
+    <svg class="chang-svg__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+      <circle class="change-svg__svg__circle" cx="100" cy="100" r="75" stroke-width="20" fill="#F80" stroke="#555" />
+    </svg>
+    <div class="change-svg__input-row">
+      <input class="demo-input change-svg__input--fill" value="#F80" />
+      <input class="demo-input change-svg__input--stroke" value="#555" />
+    </div>
+  </div>
+</div>
