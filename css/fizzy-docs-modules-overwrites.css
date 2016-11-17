@@ -58,6 +58,30 @@
 .showcase .logo-pizza-illo { background: white; }
 .showcase .packery-illo { background: white; }
 
+/* ---- fizzy-bear-shirt ---- */
+
+
+.fizzy-bear-shirt__link {
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  display: block;
+}
+
+.fizzy-bear-shirt__title {
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+
+.fizzy-bear-shirt__image { border-radius: 5px; }
+
+.fizzy-bear-shirt__link:hover {
+  background: #D28;
+  color: white;
+  text-decoration: none;
+}
+
+
 /* ---- metafizzy-brand ---- */
 
 .metafizzy-logo {
