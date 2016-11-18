@@ -16,7 +16,7 @@
 
 .hero .huebee-illo {
   width: 60px;
-  height: 60px;
+  height: auto;
   float: left;
   margin-right: 10px;
 }
@@ -54,7 +54,6 @@
 
   .hero .huebee-illo {
     width: 280px;
-    height: 280px;
     margin: 0 10px;
   }
 
