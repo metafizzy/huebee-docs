@@ -85,19 +85,17 @@
 /* ---- metafizzy-brand ---- */
 
 .metafizzy-logo {
-  width: 40px;
   margin-right: 5px;
 }
 
 .metafizzy-wordmark {
-  width: 160px;
 }
 
 .metafizzy-brand__link {
   display: inline-block;
 }
 
-.metafizzy-wordmark,
+.metafizzy-wordmark path,
 .metafizzy-logo__outline,
 .metafizzy-logo__eyes-nose { fill: white; }
 
@@ -109,7 +107,7 @@
 
 .metafizzy-brand__link:hover { text-decoration: none; }
 
-.metafizzy-brand__link:hover .metafizzy-wordmark,
+.metafizzy-brand__link:hover .metafizzy-wordmark path,
 .metafizzy-brand__link:hover .metafizzy-logo__outline,
 .metafizzy-brand__link:hover .metafizzy-logo__eyes-nose { fill: #555; }
 

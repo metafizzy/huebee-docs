@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "normalize-css": "^5.0.0",
-    "huebee": "^1.0.0"
+    "huebee": "^1.0.0",
+    "fizzy-docs-modules": "metafizzy/fizzy-docs-modules"
   }
 }
