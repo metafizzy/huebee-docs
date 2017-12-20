@@ -1,14 +1,14 @@
 {
   "name": "huebee-docs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "gulpfiles.js",
+  "version": "2.0.0",
+  "description": "Documentation site for Huebee",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "BY-CC",
+  "author": "David DeSandro",
+  "license": "CC-BY-3.0",
   "dependencies": {
     "glob": "^7.1.1",
     "gulp": "^3.9.1",
@@ -22,5 +22,14 @@
     "handlebars-layouts": "^3.1.4",
     "highlight.js": "^9.8.0",
     "transfob": "^1.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metafizzy/huebee-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/metafizzy/huebee-docs/issues"
+  },
+  "homepage": "http://huebee.buzz"
 }

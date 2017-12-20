@@ -6,7 +6,7 @@
   "description": "Homepage and documentation for Huebee",
   "main": "",
   "license": "BY-CC",
-  "homepage": "http://huebee.metafizzy.co",
+  "homepage": "http://huebee.buzz",
   "private": true,
   "ignore": [
     "**/.*",
@@ -16,8 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "^5.0.0",
-    "huebee": "^1.0.0",
+    "normalize-css": "^7.0.0",
+    "huebee": "^2.0.0",
     "fizzy-docs-modules": "metafizzy/fizzy-docs-modules"
   }
 }

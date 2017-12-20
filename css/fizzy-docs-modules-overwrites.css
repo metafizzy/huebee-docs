@@ -1,25 +1,5 @@
-
-/* ---- buy buttons ---- */
-
-.buy-button {
-  background: hsla(0, 0%, 0%, 0.04);
-}
-
-.buy-button__price {
-  background: #F80;
-}
-
-.buy-button:hover { text-decoration: none; }
-
-.buy-button:hover .buy-button__price {
-  background: #08F;
-}
-
-/* ---- site-footer ---- */
-
-*[data-license-property] {
-  color: #08F;
-}
+/* fizzy-docs-modules overwrites
+------------------------- */
 
 /* ---- site-footer ---- */
 
@@ -29,18 +9,9 @@
   z-index: 1; /* above site-nav */
 }
 
-/* ---- showcase ---- */
-
-.showcase-item__link {
-  background: white;
+.site-footer a:hover {
+  text-decoration: none;
 }
-
-.showcase-item__link:hover {
-  background: #D28;
-  color: white;
-}
-
-/* ---- site-footer ---- */
 
 .site-footer__copy a { color: white ;}
 
@@ -53,78 +24,50 @@
 
 .site-footer__copy a:hover .twitter-logo { fill: #555; }
 
-/* ----  ---- */
+/* ---- showcase ---- */
+
+.showcase-item__link {
+  background: white;
+}
+
+.showcase-item__link:hover {
+  background: #D28;
+  color: white;
+}
 
 .showcase .logo-pizza-illo { background: white; }
 .showcase .packery-illo { background: white; }
 
-/* ---- fizzy-bear-shirt ---- */
+/* ---- mfzy-brand ---- */
 
+/* logo */
+.site-footer .mfzy-logo__body-outline,
+.site-footer .mfzy-logo__cut-ins { stroke: white; }
+.site-footer .mfzy-logo__body-fill { fill: #F80; }
+.site-footer .mfzy-logo__snout,
+.site-footer .mfzy-logo__stripes { display: none; }
+.site-footer .mfzy-logo__feature { fill: white; }
 
-.fizzy-bear-shirt__link {
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  display: block;
-}
+/* logo hover */
+.site-footer a:hover .mfzy-logo__body-outline,
+.site-footer a:hover .mfzy-logo__cut-ins { stroke: #333; }
+.site-footer a:hover .mfzy-logo__snout,
+.site-footer a:hover .mfzy-logo__stripes { display: inline; }
+.site-footer a:hover .mfzy-logo__feature { fill: #333; }
 
-.fizzy-bear-shirt__title {
-  margin-top: 0;
-  font-size: 1.8rem;
-}
+/* wordmark */
+.site-footer .mfzy-wordmark { stroke: white; }
+.site-footer a:hover .mfzy-wordmark { stroke: #333; }
 
-.fizzy-bear-shirt__image { border-radius: 5px; }
-
-.fizzy-bear-shirt__link:hover {
-  background: #D28;
-  color: white;
-  text-decoration: none;
-}
-
-
-/* ---- metafizzy-brand ---- */
-
-.metafizzy-logo {
-  margin-right: 5px;
-}
-
-.metafizzy-wordmark {
-}
-
-.metafizzy-brand__link {
-  display: inline-block;
-}
-
-.metafizzy-wordmark path,
-.metafizzy-logo__outline,
-.metafizzy-logo__eyes-nose { fill: white; }
-
-.metafizzy-logo__snout,
-.metafizzy-logo__stripe1,
-.metafizzy-logo__stripe2,
-.metafizzy-logo__stripe3,
-.metafizzy-logo__stripe4 { fill: #F80; }
-
-.metafizzy-brand__link:hover { text-decoration: none; }
-
-.metafizzy-brand__link:hover .metafizzy-wordmark path,
-.metafizzy-brand__link:hover .metafizzy-logo__outline,
-.metafizzy-brand__link:hover .metafizzy-logo__eyes-nose { fill: #555; }
-
-.metafizzy-brand__link:hover .metafizzy-logo__stripe1 { fill: #D28; }
-.metafizzy-brand__link:hover .metafizzy-logo__stripe2 { fill: #F00; }
-.metafizzy-brand__link:hover .metafizzy-logo__stripe3 { fill: #F80; }
-.metafizzy-brand__link:hover .metafizzy-logo__stripe4 { fill: #08F; }
-
-.metafizzy-brand__link:hover .metafizzy-logo__snout { fill: white; }
 
 @media screen and ( min-width: 768px ) {
-  .metafizzy-logo {
-    width: 60px;
-    margin-right: 10px;
+  .site-footer .mfzy-logo {
+    width: 72px;
+    height: 72px;
   }
 
-  .metafizzy-wordmark {
-    width: 230px;
+  .site-footer .mfzy-wordmark {
+    width: 280px;
+    height: 80px;
   }
 }

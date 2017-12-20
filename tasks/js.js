@@ -6,7 +6,6 @@ var getGlobPaths = require('./utils/get-glob-paths');
 var jsSrc = [
   // components
   'bower_components/ev-emitter/ev-emitter.js',
-  'bower_components/matches-selector/matches-selector.js',
   'bower_components/unipointer/unipointer.js',
   'bower_components/huebee/huebee.js',
   'bower_components/fizzy-docs-modules/*/*.js',
