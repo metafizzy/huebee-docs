@@ -41,15 +41,11 @@ description: One-click color picker. Huebee displays a limited set of colors so 
 <p>Link directly to Huebee files on <a href="https://unpkg.com/">unpkg</a>.</p>
 
 ``` html
-<link rel="stylesheet" href="https://unpkg.com/huebee@1/dist/huebee.min.css">
-<!-- or -->
-<link rel="stylesheet" href="https://unpkg.com/huebee@1/dist/huebee.css">
+<link rel="stylesheet" href="https://unpkg.com/huebee@2/dist/huebee.min.css">
 ```
 
 ``` html
-<script src="https://unpkg.com/huebee@1/dist/huebee.pkgd.min.js"></script>
-<!-- or -->
-<script src="https://unpkg.com/huebee@1/dist/huebee.pkgd.js"></script>
+<script src="https://unpkg.com/huebee@2/dist/huebee.pkgd.min.js"></script>
 ```
 
 {{! ----------------------------------------------------------------- }}
@@ -342,6 +338,27 @@ $('.color-input').each( function( i, elem ) {
   <div class="duo__cell example__demo">
     <input class="demo-input"
       data-huebee='{ "customColors": [ "#C25", "#E62", "#EA0", "#19F", "#333" ], "staticOpen": true }' />
+  </div>
+</div>
+
+<p>Set <code>shades: 0</code> to disable normal colors and use only custom colors. Use <code>hues</code> to set the number of columns.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    customColors: [ '#C25', '#E62', '#EA0', '#ED0', '#6C6', '#19F', '#258', '#333' ],
+    shades: 0,
+    hues: 4,
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <input class="demo-input"
+      data-huebee='{
+        "customColors": [ "#C25", "#E62", "#EA0", "#ED0", "#6C6", "#19F", "#258", "#333" ],
+        "shades": 0,
+        "hues": 4,
+        "staticOpen": true
+      }' value="#C25" />
   </div>
 </div>
 

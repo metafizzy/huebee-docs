@@ -6,7 +6,7 @@
   "description": "Homepage and documentation for Huebee",
   "main": "",
   "license": "BY-CC",
-  "homepage": "http://huebee.buzz",
+  "homepage": "https://huebee.buzz",
   "private": true,
   "ignore": [
     "**/.*",

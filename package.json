@@ -1,6 +1,6 @@
 {
   "name": "huebee-docs",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Documentation site for Huebee",
   "main": "gulpfile.js",
   "scripts": {
@@ -31,5 +31,5 @@
   "bugs": {
     "url": "https://github.com/metafizzy/huebee-docs/issues"
   },
-  "homepage": "http://huebee.buzz"
+  "homepage": "https://huebee.buzz"
 }
