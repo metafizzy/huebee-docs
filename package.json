@@ -20,7 +20,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-uglify": "^2.0.0",
     "handlebars-layouts": "^3.1.4",
-    "highlight.js": "^9.8.0",
+    "highlight.js": "^10.1.2",
     "transfob": "^1.0.0"
   },
   "devDependencies": {},
